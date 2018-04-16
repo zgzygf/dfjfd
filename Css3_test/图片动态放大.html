@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transform</title>
+</head>
+<style type="text/css">
+.main{ width:600px;margin:0 auto; padding:10px; background:#D0D0D0; height:240px;}
+.main  ul{ margin:0; padding:0;}
+.main li{float:left; list-style:none; width:180px; margin:10px; position: relative;overflow:hidden; cursor:pointer;}
+.main li img{ width:180px; height:100px; transition:all 1s ease;}
+.main li .title{ position:absolute; bottom:0; left:-200px; background:#151515; color:#fff; width:180px; text-align:center; transition:all 500ms ease;}
+.main li:hover img{ transform:scale(1.5);}
+.main li:hover .title{ transform: translateX(200px);}
+/*transform是动画执行的方式（旋转、滑动、缩放……）； transition是动画执行的效果（全部属性，时间 ，运动轨迹）  */
+</style>
+<script type="text/javascript" src="file:///E|/zhangshichao/js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".title").click(function(e) 
+		//$(this).siblings("img").removeClass(".main");
+        $(this).siblings("img").css("transform","scale(1.0)");
+    });
+	})
+</script>
+<body>
+<div class="main">
+  <ul>
+    <li>
+      <img src="images/Chrysanthemum.jpg" alt="我是美图01">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/Desert.jpg" alt="我是美图02">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/Jellyfish.jpg" alt="我是美图03">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/Koala.jpg" alt="我是美图04">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/Penguins.jpg" alt="我是美图05">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+    <li>
+      <img src="images/Tulips.jpg" alt="我是美图06">
+      <div class="title">
+      	<p>产品展示</p>
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css构造</title>
+	</head>
+	<body>
+		<main role="main">
+			<article>
+				<pre>
+					<code>
+						哪些属性会被继承
+						以下是会被继承的 CSS 属性，我们按照类型对其进行了分组。这些属性中的大多数都将
+						在本书后续章节进行讲解，不过你可以根据它们的名称猜出其作用。
+						◎ 文本
+						 color（颜色，a 元素除外）
+						 direction（方向）
+						 font（字体）
+						 font-family（字体系列）
+						 font-size（字体大小）
+						 font-style（用于设置斜体）
+						 font-variant（用于设置小型大写字母）
+						 font-weight（用于设置粗体）
+						 letter-spacing（字母间距）
+						 line-height（行高）
+						 text-align（用于设置对齐方式）
+						 text-indent（用于设置首行缩进）
+						 text-transform（用于修改大小写）
+						 visibility（可见性）
+						 white-space（用于指定如何处理空格）
+						 word-spacing（字间距）
+						◎ 列表
+						 list-style（列表样式）
+						 list-style-image（用于为列表指定定制的标记）
+						 list-style-position（用于确定列表标记的位置）
+						 list-style-type（用于设置列表的标记）
+						◎ 表格
+						 border-collapse（用于控制表格相邻单元格的边框是否合并为单一边框）
+						 border-spacing（用于指定表格边框之间的空隙大小）
+						 caption-side（用于设置表格标题的位置）
+						 empty-cells（用于设置是否显示表格中的空单元格）
+						◎ 页面设置（对于印刷物）
+						 orphans（用于设置当元素内部发生分页时在页面底部需要保留的最少行数）
+						 page-break-inside（用于设置元素内部的分页方式）
+						 widows（用于设置当元素内部发生分页时在页面顶部需要保留的最少行数）
+						
+						◎ 其他
+						 cursor（鼠标指针）
+						 quotes（用于指定引号样式）
+					</code>
+				</pre>
+				<pre>
+					<code>
+						1. inherit
+						对于任何属性，如果希望显式地指出该
+						属性的值与对应元素的父元素对该属性设定
+						的值相同，就可以使用 inherit 值。例如，假
+						设有一个 article 元素，其中包含几个段落。
+						article 元素设置了一个边框。边框通常不会
+						被继承，因此 p { border: inherit; } 这条
+						规则可以让这些段落获得相同的边框样式。
+					</code>
+				</pre>
+				<div style="border:1px solid #ddd; width: 100%; height: 200px;">
+					<p style="border: inherit;">asfssdafd</p>
+				</div>
+			</article>
+			<img src="img/csso.png" alt="css颜色基本种类" />
+			<p>
+				<pre>
+					<code>
+						/* 不透明，和 rgb(89, 0, 127); 效果相同 */
+						background-color: rgba(89,0,127,1);
+						/* 完全透明 */
+						background-color: rgba(89,0,127,0);
+						/* 25% 透明 */
+						background-color: rgba(89,0,127,0.75);
+						/* 60% 透明 */
+						background-color: rgba(89,0,127,0.4);
+					</code>
+				</pre>
+			</p>
+		</main>
+	</body>
+</html>

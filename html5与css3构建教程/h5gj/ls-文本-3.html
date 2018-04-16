@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本</title>
+	</head>
+	<body>
+		<header role="banner">
+			头部内容
+		</header>
+		<main role="main">
+			<article>
+				<p>
+					em元素用于标识强调的文本，cite元素用于标识对艺术作品，电影，图书等内容引用。不应该为了让文字变为斜体就使用 em 或 cite，添加样式是 CSS 的事情。
+				</p>
+				<small>&copy;2018-01-09 the Super Store.</small>
+				<p>根据 HTML5，small 表示细则一类的旁注（side comment），“通常包括免责声明、注意事项、法律限制、版权信息等。有时我们还可以用它来表示署名，或者满足许可要求。”</p>
+				<p><strong>waring:please request</strong><em>look</em>friendly,but that's just because they</p>
+				<p><strong>标记重要文本</strong><em>强调文本</em></p>
+				<p>可以在标记为 strong 的短语中再嵌套 strong 文本。如果这样做，作为另一个strong 的子元素的 strong 文本的重要程度会递增。这种规则对嵌套在另一个 em 里的 em 文本也适用。</p>
+				<p>b 元素表示出于实用目的提醒读者注意的一块文字，不传达任何额外的重要性，也不表示其他的语态和语气，用于如文档摘要里的关键词、评论中的产品名、基于文本的交互式软件中指示操作的文字、文章导语等。</p>
+				<p>i 元素表示一块不同于其他文字的文字，具有不同的语态或语气，或其他不同于常规之处，用于如分类名称、技术术语、外语里的惯用语、翻译的散文、西方文字中的船舶名称等。</p>
+				<figure>
+				 <figcaption>
+				 	<b>Figure 3:</b>
+					 Breakdown of Revenue by
+					Industry</figcaption>
+					 <img src="img/wb-1.png" width="180" height="143" alt="Revenue chart: Clothing 42%,Toys 36%, Food 22%" />
+				</figure>
+				<blockquote>I want all my senses engaged. Letme absorb the world's variety and uniqueness.</blockquote>
+				<blockquote cite="http://www.marktwainbooks.edu/the-adventures-of-huckleberry-finn/">
+					 <p>引述文本输入 cite="url"，其中url为引述来源的地址。We said there warn't no home like a raft, after all. Other places do seemso cramped up and smothery, but a raft don't. You feel mighty free andeasy and comfortable on a raft.</p>
+				</blockquote>
+				<abbr title="National Football League">NFL</abbr>
+				<abbr title="缩写词全称">缩写词本身</abbr>
+				<dfn>定义术语</dfn>
+				<strong>下标<sub>2</sub></strong>
+				<b>上标<sup>2</sup></b>
+				<address>
+					Have a question or comment about the site? <a href="site-feedback.html">Contact our web team</a>提供作者联系信息
+				</address>
+				<p>如果 address 嵌套在 article 里，则属于其所在的最近的 article 元素；否则属于页面的 body。说明整个页面的作者的联系信息时，通常将 address 放在 footer 元素里，</p>
+				<pre>预格式化文本</pre>
+				<p><code>标记代码或文件名的步骤,html</code></p>
+				<p><del>标记已删除的文本</del></p>
+				<p><ins>插入文本</ins></p>
+				<p><s>标记不再准确或不再相关的文本</s></p>
+				<pre>
+					<code>
+					 abbr[title] {
+					 border-bottom: 1px dotted #000;
+					 }
+					</code>
+				</pre>
+				<p><mark>突出显示文本</mark></p>
+				<p><u>为文本添加下划线</u></p>
+				<p>为文本添加可换行出</wbr>assf sfsf </p>
+				<p>
+					<progress max="100" value="37">37%saved</progress>
+					<meter value="0.5"></meter>
+				</p>
+			</article>
+		</main>
+	</body>
+</html>

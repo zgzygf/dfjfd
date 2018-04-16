@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用css布局</title>
+	</head>
+	<body>
+		<div class="page">
+			 <!-- ==== 开始报头 ==== -->
+			 <header class="masthead" role="banner">
+			 	<h1>网站设计主要有两大类型：固定宽度和响应式。</h1>
+				 <p class="logo"><a href="/"><img ... /></a></p>
+				 <ul class="social-sites">
+				 ... [社交图片链接] ...
+				 </ul>
+				 <nav role="navigation">
+				 ... [主导航链接列表] ...
+				 </nav>
+			</header>
+				 <!-- 结束报头 -->
+			<div class="container">
+				 <!-- ==== 开始主体内容 ==== -->
+			<main role="main">
+					<section class="post">
+						 <h1>Sunny East Garden at theGetty Villa</h1>
+						 <img ... class="post-photo-full" />
+						 <div class="post-blurb">
+						 	<p>It is hard to believe ...</p>
+						 </div>
+						<footer class="footer">
+							 ... [博客条目页脚] ...
+						</footer>
+					</section>
+					<section class="post">
+						 <h1>The City Named After QueenVictoria</h1>
+						 <img ... class="post-photo" />
+						 <div class="post-blurb">
+						 	<p>An hour and a half aboard</p>
+						 </div>
+						<footer class="footer">
+ 						... [博客条目页脚] ...
+ 						</footer>
+					</section>
+					<nav role="navigation">
+						 <ol class="pagination">
+						 ... [链接列表项] ...
+						 </ol>
+					</nav>
+			</main>
+				<!-- 结束主体内容 -->
+				<!-- ==== 开始附注栏 ==== -->
+			<div class="sidebar">
+					 <article class="about">
+					 	<h2>About Me</h2>
+					 ...
+					 </article>
+					 <div class="mod">
+					 	<h2>My Travels</h2>
+					 ... [映射图像] ...
+					 </div>
+					 <aside class="mod">
+					 	<h2>Popular Posts</h2>
+						 <ul class="links">
+						 ... [链接列表项] ...
+						 </ul>
+					 </aside>
+					 <aside class="mod">
+						 <h2>Recently Shared</h2>
+						 <ul class="links">
+						 ... [链接列表项] ...
+						 </ul>
+						 <p>
+						 	不能为显示为行内元素的元素（如短
+							语内容）设置高度或宽度，除非为它们设置
+							display: inline-block 或 display: block。
+							关于 display 属性的更多信息
+						 </p>
+					 </aside>
+					 </div>
+					 <!-- 结束附注栏 -->
+				</div>
+				<div style="width: 100px; height: 100px; background-color: #90EE90; float: left;"></div>
+				<div style="width: 100px; height: 100px; background-color:#ADD8E6; float: left; clear:left;">saf</div>
+				<div style="width: 100px; height: 100px; background-color:#ADD8E6;  float:left;"></div>
+				<p>static是元素的默认值，这就是元素出现在常规文档流中的原因。</p>
+				<p> vertical-align属性仅适用于行内元素，不能应用于块级元素</p>
+				
+				<!-- 结束容器 -->
+				 <!-- ==== 开始页脚 ==== -->
+				 <footer role="contentinfo" class="footer">
+				 	<p class="legal"><small>&copy; 2013 LeJournal ...</small></p>
+				</footer>
+				 <!-- 结束页脚 -->
+			</div>
+				<!-- 结束页面 -->
+	</body>
+</html>

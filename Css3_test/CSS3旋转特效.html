@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3旋转特效</title>
+<style type="text/css">
+.main{ width:660px; border:1px solid #ccc; height:440px; margin:0 auto;}
+.view{ width:200px; height:200px; overflow:hidden; position:relative; margin:10px; float:left;}
+.hover{ width:200px; background:rgba(0, 0 ,0 ,0.5); position:absolute; top:40px; left:0; text-align:center; color:#fff; transform:rotate(55deg); transition:all 0.5s; overflow:hidden; height:0; z-index:4000;/*transform:translateX(200px);*/}/*写好样式，进行隐藏，用overflow:hidden; height:0;*/
+.hover h3{ color:#fff; border-bottom:2px solid rgba(255, 255 ,255, 0.5); padding-bottom:10px;}
+.view:hover .hover{ transform:rotate(0deg); height:120px;}
+/*before   after为选择器，一般给选择器加动画背景，设置动画样式*/
+.view:before{ content:""; position:absolute; top:-240px; right:0;width:360px; height:360px; background:rgba( 150, 50, 100,0.5); transform:rotate(55deg) translateX(60px); transform-origin:100% 0%; transition:all 0.5s ease 0.3s;}/*写好样式，进行隐藏，用top:-240px;*/
+.view:hover:before{ top:0;}
+.view:after{ content:""; position:absolute;bottom:-240px; left:0;width:360px; height:360px; background:rgba( 150, 50, 100,0.5); transform:rotate(55deg) translateX(-60px) ;transform-origin:0% 100%;transition:all 0.5s ease 0.3s;}
+.view:hover:after{ bottom:0px;}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    <div class="view">
+      <img src="images/modeo02.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+    <div class="view">
+      <img src="images/modeo03.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+    <div class="view">
+      <img src="images/modeo04.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+    <div class="view">
+      <img src="images/modeo05.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+    <div class="view">
+      <img src="images/modeo06.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+    <div class="view">
+      <img src="images/modeo07.jpg" alt="">
+      <div class="hover">
+          <h3>魔力唇彩</h3>
+          <p>嘴唇的诱惑嘴唇的诱唇的诱惑嘴唇的诱惑</p>
+       </div>
+    </div>
+</div>
+
+<style type="text/css">
+.wrap{width:310px; height:410px; position:relative; margin:30px auto; overflow:hidden; border:1px solid #ccc;}
+.demo{ width:300px; height:400px; overflow:hidden;}
+.demo img{ width:80%; height:80%;}
+.demo:before{ content:""; background:rgba(150,50,50,0.2); position:absolute; top:0px; left:-300px; transform:rotate(-45deg);/* transform-origin:0% 100%;*/ transition:all 2s; width:560px; height:0px;}
+.demo:hover:before{transform: rotate(-45deg) translateY(620px); height:10px;}
+</style>
+<div class="wrap">
+    <div class="demo">
+        <img src="images/modeo01.jpg" alt="">
+    </div>
+</div>
+
+<style type="text/css">
+#float{ position:relative; width:300px; margin:20px auto; height:100px; border:1px solid #069; overflow:hidden;}
+#float .sp1{ color:#000;float:left; border:1px solid #0F0; width:80px; height:30px;}
+#float .sp2{ background:#900; transition:all 0.2s ease; position:absolute; right:0px; float:left; width:80px; height:30px;}
+#float:hover .sp2{/* transform:translateX(100px);*/-webkit-transform:translate(-20px,-30px);}
+/*.sp2{-webkit-transform:translateX(-500px);}*/
+</style>
+<div id="float">
+<div class="sp1">1F</div>
+<div class="sp2">新鲜蔬菜</div>
+</div>
+
+<style type="text/css">
+.middle-goods-list {width: 775px !important;   height: 499px !important; position:relative; z-index:1; margin:0; padding:0;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    border-color: transparent #DDD #DDD transparent;
+    overflow: hidden;
+    padding-top: 1px;
+}
+.middle-goods-list ul {
+    width: 795px;
+    height: 498px;
+    margin: 0 -1px -1px 0;
+}
+.middle-goods-list ul li {
+    width: 258px;
+    height: 247px;
+    float: left;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: transparent #DDD #DDD transparent;
+    overflow: hidden;
+    position: relative;
+}
+.middle-goods-list ul li:hover .goods-addcar {
+    transform: translateX(260px);
+}
+.middle-goods-list dl dd.goods-addcar {
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    z-index: auto;
+    top: 203px;
+    left: -260px;
+    height: 30px;
+    text-align: center;
+    transition: all 500ms ease;
+}
+</style>
+<div class="tabs-panel middle-goods-list ">
+        <ul id="goods01">
+         <li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010116" title="">食饵</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010116" "=""><img id="goodimg010116" src="/xian-website/image/load.do?fileName=..\images\goods\010116.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥40.00</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010116"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010116')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010116')" id="decrease010116">-</a><a href="javascript:void(0);" onclick="addcartIndex('010116')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010170" title="">白蒜</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010170" "=""><img id="goodimg010170" src="/xian-website/image/load.do?fileName=..\images\goods\010170.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥6.50</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010170"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010170')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010170')" id="decrease010170">-</a><a href="javascript:void(0);" onclick="addcartIndex('010170')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010190" title="">黄瓜</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010190" "=""><img id="goodimg010190" src="/xian-website/image/load.do?fileName=..\images\goods\010190.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥1.00</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010190"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010190')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010190')" id="decrease010190">-</a><a href="javascript:void(0);" onclick="addcartIndex('010190')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010088" title="">竹笋</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010088" "=""><img id="goodimg010088" src="/xian-website/image/load.do?fileName=..\images\goods\010088.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥5.80</em><span class="original">/袋</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010088"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010088')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010088')" id="decrease010088">-</a><a href="javascript:void(0);" onclick="addcartIndex('010088')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010176" title="">红葱(优质)</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010176" "=""><img id="goodimg010176" src="/xian-website/image/load.do?fileName=..\images\goods\010176.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥1.80</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010176"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010176')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010176')" id="decrease010176">-</a><a href="javascript:void(0);" onclick="addcartIndex('010176')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010093" title="">红线椒</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010093" "=""><img id="goodimg010093" src="/xian-website/image/load.do?fileName=..\images\goods\010093.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥13.00</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010093"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010093')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010093')" id="decrease010093">-</a><a href="javascript:void(0);" onclick="addcartIndex('010093')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010084" title="">韭黄</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010084" "=""><img id="goodimg010084" src="/xian-website/image/load.do?fileName=..\images\goods\010084.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥8.00</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010084"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010084')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010084')" id="decrease010084">-</a><a href="javascript:void(0);" onclick="addcartIndex('010084')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li><li><dl><dt class="goods-name"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010100" title="">干豆角</a></dt><dd class="goods-thumb"><a target="_blank" href="/xian-website/goods/GoodsList/goodsInfo.do?id=010100" "=""><img id="goodimg010100" src="/xian-website/image/load.do?fileName=..\images\goods\010100.jpg" onerror="this.src='/xian-website/image/load.do?fileName=..\\images\\goods\\nullgoods.png'" alt=""></a></dd><dd class="goods-price"><em>￥17.80</em><span class="original">/斤</span></dd><dd class="goods-addcar"><span>购买数量：</span><input type="text" value="1" size="3" maxlength="6" class="quantity" id="quantity010100"><a class="increase" href="javascript:void(0)" onclick="increaseFun('010100')" id="increase">+</a><a class="decrease" href="javascript:void(0)" onclick="decreaseFun('010100')" id="decrease010100">-</a><a href="javascript:void(0);" onclick="addcartIndex('010100')" class="addshopcar" id="adcar"><i class="icon-shopping-cart"></i>加入购物车</a></dd></dl></li></ul>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div id=demo style="overflow:hidden;width:750;" align=center>
+	<table border=0 align=center cellpadding=1 cellspacing=1 cellspace=0 >
+		<tr><td valign=top bgcolor=ffffff id=marquePic1>
+	<table width='100%' border='0' cellspacing='0'><tr><td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80 border=0><br><br>01</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>02</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>03</a></td><td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80 border=0><br><br>04</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>05</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>06</a></td><td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80 border=0><br><br>07</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>08</a></td><td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80 border=0><br><br>09</a></td></tr></table>
+		</td><td id=marquePic2 valign=top></td></tr>
+	</table></div>
+<script type="text/javascript">
+var speed=50 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+<p>查找更多代码，请访问：<a href="http://www.lanrentuku.com" target="_blank">懒人图库</a></p>

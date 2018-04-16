@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>构建响应式网站</title>
+	</head>
+	<body>
+		<!--响应式网站栗子网址http://foodsense.is/tastemakers-->
+		<!--响应式www.htmlcssvqs.com/8ed/examples/12/finished-page.html-->
+		<pre>
+			<code>
+				当我们希望页面呈现的盒子的宽度是200px的时候，我们需要减去它的左右边框和左右补白，然后设置为对应的CSS宽度。例如我们设置希望盒子宽度为200px，但是盒子有内边距20像素和一个像素的边框，则需要先减去左右补白各20px，左右边框各1px，然后设置对应的CSS宽度158px。
+				当你设置box-sizing:border-box以后，这就能达到你想要的目的。例如，上面我们想要一个宽度为200px的盒子，那么我们直接设置宽度为200px。是不是看起来清晰多了。当再设置它的左右边框和左右补白后，它的内容区会自动调整。这可能更直接和一目了然。CSS代码如下：
+				div {
+				    box-  sizing: border-box;
+				    width: 200px;
+				    padding: 20px;
+				    border: 1px solid #DDD;
+				}
+				
+			</code>
+		</pre>
+		<p>.page div没有指定字体大小font-size,因此他会从父元素body继承，body的默认字体大小为16px;所以想让.page的最大宽度设为960像素，960/16=60em。设置.page{max-width:60em;}与使用960px；是相似的，但是他们有一个不同就是前者会根据浏览器默认字体大小进行缩放。/p>
+		<div>
+		    <pre>
+				<code>
+					<!--<link rel="stylesheet" media="only screen and (min-width: 480px) and (max-width: 767px)"  href="styles.css" />
+					<link rel="stylesheet" media="only screen and (orientation:landscape)" href="styles.css" />
+					<link rel="stylesheet" media="only print and (color)" href="color-pages.css" />
+					<link rel="stylesheet" media="only print and (monochrome)" href="monochrome-pages.css" /> -->
+					媒体查询种类
+				</code>
+			</pre>
+		</div>
+		<h2>响应式网页的准备1.可伸缩图像2.弹性布局3.媒体查询，三者组合一起创建响应式网页</h2>
+		<pre>
+			<code>
+				/* 20em (大于等于320px)
+					----------------------------------- */
+					@media only screen and (min-width:
+					20em) {
+					 .nav-main li {
+					 border-left: 1px solid #c8c8c8;
+					 display: inline-block;
+					 text-align: left;
+					 }
+					 .nav-main li:first-child {
+					 border-left: none;
+					 }
+					 .nav-main a {
+					 display: inline-block;
+					 font-size: 1em;
+					 padding: .5em .9em .5em 1.15em;
+					 }
+					}
+					
+					//提 示 Eivind Uggedal 的 http://mediaqueri.es网站汇集了大量现实的响应式网站（数量还在增加），值得借鉴。
+					//提示 Screen Sizes 网站（http://screensiz.es）提供了流行设备和显示屏的分辨率和设备宽度信息。使用媒体查询的时候，这些信息可能很有用。
+			</code>
+		</pre>
+		
+	</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+	font-family:  Geneva, Tahoma, Verdana, sans-serif;/*四种备选字体*/
+	font-style: italic;/*设为斜体*/
+	font-style: normal;/*取消斜体*/
+	font-size: 100%;
+}
+h1,
+h2 {
+ font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+ font-weight: bold;/*加粗*/
+ font-weight: normal;/*取消加粗*/
+}
+.projet{
+	font-size: .9375em;
+}
+.projet p{
+	line-height: 1.65;
+}
+h2{
+	letter-spacing: 0.4em;
+}
+.zt{
+	text-transform: uppercase;
+}
+.zt span{
+	text-transform: lowercase;
+}
+.zt strong{
+	text-transform: capitalize;
+}
+.small{
+	font-variant: small-caps;
+}
+.over{
+	text-decoration: overline;
+}
+.under{
+	text-decoration: underline;
+}
+.throu{
+	text-decoration: line-through;
+}
+.kbsx{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

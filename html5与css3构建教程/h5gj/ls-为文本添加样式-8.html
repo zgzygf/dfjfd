@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>为文本添加样式</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div class="projet">
+			<p>　假设 body 元素默认大小为 16 像素，.project 类 p 元素的字体大小为 0.9375em，即 15像素。行高将是 15 像素的 1.65 倍，即大约 24.75像素。</p>
+			<p>
+				<pre>
+					<code>
+						1. 理解 em 和百分数字体大小
+						使用这种方法时，最好在 body 元素上建立一个基准，即声明 body{ font-size:100%; };这项设置等价于将字体大小设为16px，即大多数系统的默认字体大小。
+						那么，如何计算要指定的 em 值呢？实
+						际上，1em 总是等于默认的字号大小，这是
+						em 的工作原理。在这里，1em 就等于 16px，
+						因为我们将其创建为元素的默认字号。据此
+						可以通过一点点除法确定 em 值（或百分比）。
+								要指定的字体大小／父元素的字体大小＝值
+						
+						例如，如果要将 h1 设为 35px，
+						同时已知其父元素的字体大小为 16px，因此
+						35 / 16 = 2.1875
+						因 此， 设 置 h1{font-size: 2.1875em;}
+						这条规则表示“将
+						h1 文本的大小设置为其父元素文本大小的
+						2.1875 倍”。另一种方式是写成 h1 { fontsize:
+						218.75%; }。不过，除了在 body 中设
+						置基准 font-size 时使用百分数以外，设置字
+						体大小时使用 em 比百分数更为常见。
+					</code>
+				</pre>
+				<pre>
+					<code>
+						body {
+							 background: #004 url(../img/ufo.png) no-repeat 170px 20px; 
+							 color: greenyellow;
+							}
+					</code>
+				</pre>
+			</p>
+			<h2>文本添加样式</h2>
+			<p>
+				<pre>
+					<code>
+						修改文本大小写的步骤
+						(1) 输入 text-transform:。
+						(2) 在冒号（:）后输入 capitalize 让每
+						个单词的首字母大写；
+						或者输入 uppercase 让所有字母大写；
+						或者输入 lowercase 让所有字母小写；
+						或者输入none让文本保持本来的样子（可
+						以用来取消继承的值）。
+					</code>
+				</pre>
+			</p>
+			<p class="zt">html<span>HTML</span><strong>we the one sadf html</strong></p>
+			<p class="small">asdfasfasdfsadf</p>
+			<p class="over">添加上划线</p>
+			<p class="under">添加下划线</p>
+			<p class="throu">添加删除线</p>
+			<p class="kbsx">asdfsljfls  lsd lalf saldjfklsa asdf阿萨德覅了拉卡拉是登录吉林省路费撒进来撒代理费 睡懒觉拉了</p>
+			<p>asdfasj阿萨德不方便巴斯克会计师可精神可嘉的看</p>
+		</div>
+	</body>
+</html>

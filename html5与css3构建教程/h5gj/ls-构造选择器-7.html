@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>构造选择器</title>
+		<style>
+			a[title]{
+				color: red;
+			}
+			a[href="javascript:;"]{
+				color:#90EE90;
+			}
+			.cld p+p{/*相邻同胞结合符只选择直接跟在同胞 p元素之后的元素*/
+				color: red;
+			}
+			.cld p:first-child{/*选择第一个子元素同理最后一个元素用:last-child*/
+				color: #90EE90;
+			}
+			p:first-letter{
+				color: red;
+			}
+			p:first-line{
+				color: #90EE90;
+			}
+			.project h2[lang|="es"] + p em {/*组合使用选择器*/
+				 color: red;
+				}
+		</style>
+	</head>
+	<body>
+		<a title="title">title属性的样式不同测试</a>
+		<a href="javascript:;">a的样式测试</a>
+		<div class="cld">
+			<p>12</p>
+			<p>sfasfs</p>
+		</div>
+		<p>asdfasdfjiasdfisdoasdfsajisjdaiofjisajdifjasidjfisajd阿萨德覅啊速度和华塑或富说对会爱上对方会u爱速度发哈舒服挥洒的䊲UI苏菲花生电话费爱上杀毒胡说啊u发货岁的哈杀毒奉化市护发素粉底刷湖发生的华 UI随后</p>
+	</body>
+</html>

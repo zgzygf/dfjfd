@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3动效</title>
+</head>
+<style type="text/css">
+.demo{ width:300px; height:300px;position:relative;}
+.wrap{ width:300px; height:300px; position:absolute; top:0 ;left:0; background:url(images/wrap-bg.png) no-repeat; display:block; transform:rotate(180deg); transition:ease-in 0.6s;}
+.demo:hover .wrap{ transform:rotate(0deg);}
+.photo,.text{ position:absolute; top:10px;left:10px;width:280px; height:280px;}
+.photo img,.text{ border-radius:50%; width:280px; height:280px;}
+.text{background:rgba(78,78,12,0.5); text-align:center; overflow:hidden; line-height:30px; color:#fff; transform:rotate(180deg); transition:all 0.3s; transform-origin:top; height:0;}
+.demo:hover .text{ transform:rotate(0deg); height:280px;}
+</style>
+<body>
+<div class="main">
+  <div class="demo">
+    <div class="wrap"></div>
+    <div class="photo">
+    	<img src="images/Koala.jpg" alt="">
+    </div>
+    <div class="text">
+  		<h3>我是小可爱</h3>
+  		<p>我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝我是可爱的小考拉！我叫小宝，请叫我小宝</p>
+    </div>
+  </div>
+  
+  
+</div>
+</body>
+</html>

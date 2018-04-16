@@ -1,0 +1,25 @@
+第一步：把monoslideshow文件夹上传到blog目录中(博客安在哪个目录，就上传到哪个目录)
+
+
+第二步:PJblog日志中的写法（FCKeditor编辑器唯一写法，效果只支持IE，不支持FF,因为编辑器会过滤掉embed,没办法）,代码如下
+<object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" height="360" width="480" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+<param value="monoslideshow/monoslideshow.swf" name="movie" /><!--flash的路径"-->
+<param value="high" name="quality" />
+<param value="monoslideshow/play_img/" name="base" /> <!--xml路径,默认为"monoslideshow/play_img/",你也可以写成"monoslideshow/play_img-2/"-->
+<param value="application/x-shockwave-flash" name="TYPE" />
+<param value="#1f1f1f" name="bgcolor" /></object>
+
+
+
+如果是在后台建模块，博客模块代码写法(效果同时支持IE、FF，日志中不能这样写的原因是，编辑器会过滤掉base="monoslideshow/play_img/"，这样就不能读取xml)
+<embed type="application/x-shockwave-flash" src="monoslideshow/monoslideshow.swf" id="SOmonoSlideshow" name="SOmonoSlideshow" bgcolor="#1f1f1f" quality="high" base="monoslideshow/play_img/" height="360" width="480">
+
+
+重要说明：
+monoslideshow/play_img/monoslideshow.xml 文件里的图片路径请自行更改测试。
+monoslideshow/play_img/images/ 里为展示图片
+
+你可以在monoslideshow放两个、三个或更多的play_img（名字自己随便取）文件夹相册，
+重要的就只有两个路径，一个flash路径【src="monoslideshow/monoslideshow.swf"】和xml路径【base="monoslideshow/play_img/"】
+
+资料收集与效果测试:http://iyuer.com/ilank

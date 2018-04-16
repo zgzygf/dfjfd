@@ -1,0 +1,28 @@
+例子：http://demo.rockettheme.com/mar07_2/monoslideshow/monoslideshow.swf
+
+1.PJblog日志中的写法
+<object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" height="360" width="480" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+<param value="monoslideshow/monoslideshow.swf" name="movie" /><!--flash的路径"-->
+<param value="high" name="quality" />
+<param value="monoslideshow/play_img/" name="base" /> <!--xml路径,默认为"monoslideshow/" 如果文件夹名为123，就成"123/"-->
+<param value="application/x-shockwave-flash" name="TYPE" />
+<param value="#1f1f1f" name="bgcolor" /></object>
+
+2.博客模块代码写法
+<embed type="application/x-shockwave-flash" src="monoslideshow/monoslideshow.swf" id="SOmonoSlideshow" name="SOmonoSlideshow" bgcolor="#1f1f1f" quality="high" base="monoslideshow/" height="360" width="480">
+
+注意：xml文件与图片文件必须放到同一文件夹下，flash可以不用放在同一文件夹下，
+例如把xml文件与图片放在“photo-07902”文件夹下，flash放在“flash-070902”下
+
+那代码的写法就是
+<embed type="application/x-shockwave-flash" src="flash-070902/monoslideshow.swf" id="SOmonoSlideshow" name="SOmonoSlideshow" bgcolor="#1f1f1f" quality="high" base="photo-07902/" height="360" width="480">
+
+重要的就只有两个路径，一个flash路径【src="monoslideshow/monoslideshow.swf"】和xml路径【base="monoslideshow/play_img/"】
+monoslideshow.xml文件里的路径请自行更改测试。
+
+
+资料收集与效果测试:http://iyuer.com/ilank
+
+
+
+

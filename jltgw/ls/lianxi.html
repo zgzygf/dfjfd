@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>map-下，新增的语法糖</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//构造函数
+		/*function Person(){
+				this.name=name;
+				this.age=age;
+		};
+			Person.Prototype={
+				constructor:Person;
+				print(){
+					console.log('我叫'+this.name+'，今年'+this.age+'岁');
+				}
+			};
+			let person= new Person('张三','19');
+			console.log(person);*/
+			//2.通过class面向对象
+			
+			class Person{
+				constructor(name,age){
+					this.name=name;
+					this.age=age;
+				}
+				print(){
+					console.log('我叫'+this.name+'，今年'+this.age+'岁');
+				}
+			}
+			let person= new Person('张三','24');
+			console.log(person);
+			person.print();
+		</script>
+	</body>
+</html>

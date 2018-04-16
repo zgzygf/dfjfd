@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数扩展</title>
+	</head>
+	<body>
+		
+		<script>
+			
+			//形参设置默认值
+//			function sum(num1,num2){
+//				num1=num1||10;
+//				num2=num2||20;
+//				console.log(num1+num2);
+//			}//ES5
+//			function sum(num1 = 20, num2 = 30){
+//				console.log(num1+num2);
+//			}//ES6
+//			sum(10,30);
+  			//2.参数形式，延展操作符
+//			function sum(name,sex,...nums){
+//				let result=0;
+//				console.log(name);
+//				console.log(sex)
+//				for(let value of nums){
+//					result+=value;
+//				}
+//				return result;
+//			}
+//			console.log(sum('张三','男',10,20,30,50));
+  			//箭头函数
+  			//()=>{}
+  			let sum = (num1,num2)=>{return num1+num2;};
+  			console.log(sum(100,300));
+  			
+  			let nameArr=['张三','李四','王五','六大']
+			nameArr.forEach(function(value,index){
+				console.log(index +':' + value);
+			})
+			nameArr.forEach((value,index)=>{
+				console.log(index +':' + value);
+			});
+			//ES6this不担心指向
+			function demo(){
+				setTimeout(function(){
+					console.log(this)
+				},1000);
+				setTimeout(()=>{
+					console.log(this)
+				},1000)
+			}
+			let obj={};
+			demo.call(obj);
+		</script>
+	</body>
+</html>
