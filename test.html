@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+  	<div >
+  		<h1>测试</h1>
+  		<button onclick="myFunction()">点我</button>
+
+  	</div>
+  	<script>
+  		// window.onload=function(){
+  		// 	setTimeout(function bb(){
+  		// 		window.location.href="index.html"
+  		// 	},4000);
+  			
+  			
+  			
+  		// };
+//  var time=setInterval(function(){alert(112)},8000);
+   
+
+// function myFunction() {
+//     // setInterval(function(){ alert("Hello"); }, 3000);
+//  setInterval(autoImg(),9000);
+// }
+   // $("#app").hover(function(){
+   //    clearInterval(time);
+   // },
+   //  function(){
+   //    time=setInterval(autoImg(),2000)
+   //  }
+   // )
+   //localstorage存储计算
+  //  var res;
+  //  var now=new Date().getTime();
+  //  console.log(now)
+  // if(window.localstorage.getItem("data"){
+  // 	res=window.localstorage.getItem("data")
+  // }else{
+  // 	ajax("url",function(){
+  // 		var oldtime=new Date().getTime();;
+  // 		window.localstorage.setItem("data",res.data)
+  // 		res=res.data
+  // 	})
+  // }
+  // if((now-oldtime)/(60*60*1000)>24){
+  // 	ajax("url",function(){
+  // 		var oldtime=new Date().getTime();;
+  // 	})
+  // }
+   var res;
+   var now=new Date().getTime();
+  if(window.localStorage.getItem("data")!==null||window.localStorage.getItem("data")!==undefined){
+  	console.log(window.localStorage.getItem("data"))
+  	    
+  		
+ 	    res=window.localStorage.getItem("data")
+  	
+  }else{
+  	    
+  	    var date=new Date().getTime()
+  	    alert("开始请求了"+date)
+  		window.localStorage.setItem("data",date)
+  	    res=window.localStorage.getItem("data")
+  	    alert(res)
+  
+  }
+ 
+ 	if((now-res)/(1000)>10){
+  	alert("时间差大于10秒开始请求开始请求了")
+  	 var date=new Date().getTime()
+  	    alert("开始请求了"+date)
+  		window.localStorage.setItem("data",date)
+  	    res=window.localStorage.getItem("data")
+  	    alert(res)
+  		
+  	
+  }else{
+  	alert("没到10秒不请求")
+  	console.log(now)
+  	console.log(res.oldtime)
+  }
+
+  
+</script>
+  </body>
+</html>
+
+
+
+
